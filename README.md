@@ -83,6 +83,6 @@ You can find our data [here](https://drive.google.com/drive/folders/12rPpe7vbkxf
 
 It contains our 100% training data, you can use the "x%.py" to make it into random x% of our data.
 
-It also contains data for development(evaluate during trrining) and 5 benchmarks' evaluate data, you can use the "T5_eval_maker.py" to transform it into a T5 evaluating format(which is not needed for training).
+It also contains data for development (evaluate during training) and 5 benchmarks' evaluate data, you can use the "T5_eval_maker.py" to transform it into a T5 evaluating format (which is not needed for training).
 
 You can use the "make_quatiles.py" to generate the piqa data quartiles based on 3 terms, it's worth noting that if you want to evaluate the terms using T5, you should replace the eval.py line 63-69 with the annotated ones.
