@@ -1,9 +1,12 @@
 # commonsense-with-KG
 This repository contains the code for the paper "An Empirical Investigation of Commonsense Self-Supervision with Knowledge Graphs" see full paper [here](https://arxiv.org/abs/2205.10661)
 ## `data_process` folder:
-### The "make_quatiles.py" is used to generate the piqa data quartiles based on 3 terms.
-### The "x%.py" is used to generate the random x% of a training data.(which we used for data_size analysis)
-### The "T5_eval_maker.py '' is used to transform the raw 5 benchmarks into T5 forms data.
+The "make_quatiles.py" is used to generate the piqa data quartiles based on 3 terms.
+
+The "x%.py" is used to generate the random x% of a training data.(which we used for data_size analysis)
+
+The "T5_eval_maker.py '' is used to transform the raw 5 benchmarks into T5 forms data.
+
 The train&eval folder contains the train & evalation code for the 4 model sets mentioned in the paper: Roberta and T5 for J loss and I loss.
 ​
 To run the data process codes:
@@ -24,7 +27,7 @@ python T5_eval_maker.py \
 --out_dir {output directory}
 ```
 ## `train&eval` folder
-### It contains the train&eval code for the 4 model sets mentioned in the paper: Roberta and T5 for J loss and I loss.
+It contains the train&eval code for the 4 model sets mentioned in the paper: Roberta and T5 for J loss and I loss.
 T5 train and evaluate:
 ```
 CUDA_VISIBLE_DEVICES={} python train.py \
