@@ -78,7 +78,9 @@ python evaluate_RoBERTa.py \
 --reader {the bench mark you are evaluating}
 ```
 
-## In our data folder:
+## Our data:
+You can find our data [here](https://drive.google.com/file/d/1FE1_moXTK2Zpe4HQat78L6cXyrwtK4lO/view?usp=sharing) 
+
 It contains our 100% training data, you can use the "x%.py" to make it into random x% of our data.
 
 It also contains data for development(evaluate during trrining) and 5 benchmarks' evaluate data, you can use the "T5_eval_maker.py" to transform it into a T5 evaluating format(which is not needed for training).
