@@ -1,4 +1,4 @@
-# Guide to the code of the ACL submission "An Empirical Investigation of Commonsense Self-Supervision with Knowledge Graphs"
+# Guide to the code of the paper "An Empirical Investigation of Commonsense Self-Supervision with Knowledge Graphs"
 ## `data_process` folder:
 ### The "make_quatiles.py" is used to generate the piqa data quartiles based on 3 terms.
 ### The "x%.py" is used to generate the random x% of a training data.(which we used for data_size analysis)
