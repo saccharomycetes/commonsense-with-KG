@@ -1,5 +1,5 @@
 # commonsense-with-KG
-This repository contains the code for the paper "An Empirical Investigation of Commonsense Self-Supervision with Knowledge Graphs" 
+This repository contains the code for the paper "A Study of Zero-shot Adaptation with Commonsense Knowledge" 
 
 ## `data_process` folder:
 The "make_quatiles.py" is used to generate the piqa data quartiles based on 3 terms.
