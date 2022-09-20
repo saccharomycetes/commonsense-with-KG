@@ -8,7 +8,7 @@ The "x%.py" is used to generate the random x% of a training data.(which we used 
 
 The "T5_eval_maker.py '' is used to transform the raw 5 benchmarks into T5 forms data.
 
-The train&eval folder contains the train & evalation code for the 4 model sets mentioned in the paper: Roberta and T5 for J loss and I loss.
+The train&eval folder contains the train & evalation code for the 2 model sets mentioned in the paper: Roberta and T5.
 ​
 To run the data process codes:
 ```
@@ -28,7 +28,7 @@ python T5_eval_maker.py \
 --out_dir {output directory}
 ```
 ## `train&eval` folder
-It contains the train&eval code for the 4 model sets mentioned in the paper: Roberta and T5 for J loss and I loss.
+It contains the train&eval code for the 2 model sets mentioned in the paper: Roberta and T5.
 T5 train and evaluate:
 ```
 CUDA_VISIBLE_DEVICES={} python train.py \
