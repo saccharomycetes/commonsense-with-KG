@@ -1,4 +1,4 @@
-# Commonsense Knowledge Graph on Language Models
+# Commonsense Knowledge Graph with Language Models
 This repository contains the code for the paper "A Study of Zero-shot Adaptation with Commonsense Knowledge", 
 See the full paper [here](https://www.akbc.ws/2022/assets/pdfs/3_a_study_of_zero_shot_adaptatio.pdf).
 
