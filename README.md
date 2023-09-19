@@ -1,4 +1,4 @@
-# commonsense-with-KG
+# Commonsense Knowledge Graph on Language Models
 This repository contains the code for the paper "A Study of Zero-shot Adaptation with Commonsense Knowledge", 
 See the full paper [here](https://www.akbc.ws/2022/assets/pdfs/3_a_study_of_zero_shot_adaptatio.pdf).
 
@@ -21,7 +21,7 @@ git clone https://github.com/saccharomycetes/commonsense-with-KG.git
 cd commonsense-with-KG
 ```
 
-And create an environment and install the required packages:
+Create an environment and install the required packages:
 
 ```
 conda create -n cskglm python=3.8
@@ -29,11 +29,9 @@ conda activate cskglm
 pip install -r requirements.txt
 ```
 
-You should also download the model weights to the "models" folder.
-
 To run the general evluation code on your dataset, firstly you should organize your dataset to a json file, which is a list of list, each list contains all of the candidates, the model will pick the one that is most align with its learned commonsense knowledge.
 
-An example evluation code is shown below, where we use the [PIQA](https://arxiv.org/pdf/1906.05433.pdf) dataset as an example, the piqa dataset is ready to use in the "codes/general_eval", you can run the following code to test the result:
+An example evluation code is shown below, where we use the [PIQA](https://arxiv.org/pdf/1906.05433.pdf) dataset as an example, the piqa dataset is ready to use in the "codes/general_eval/piqa.json", you can run the following code to test the result:
 
 ```
 python codes/general_eval/general_eval.py \
@@ -46,9 +44,9 @@ python codes/general_eval/general_eval.py \
 To test on your own dataset, transfer the dataset into the same format as "piqa.json", and change the "dataset_file" to your dataset file path, change the "out_dir" to your desired output directory, and change the "device" to the GPU you want to use.
 
 
-# Code for paper reproduction
+## Code for paper reproduction
 
-## `data_process` folder:
+### `data_process` folder:
 The "make_quatiles.py" is used to generate the piqa data quartiles based on 3 terms.
 
 The "x%.py" is used to generate the random x% of a training data. (which we used for data_size analysis)
@@ -74,7 +72,7 @@ python T5_eval_maker.py \
 --dev_data_dir {you dev data directory} \
 --out_dir {output directory}
 ```
-## `train&eval` folder
+### `train&eval` folder
 It contains the train&eval code for the 2 model sets mentioned in the paper: Roberta and T5.
 T5 train and evaluate:
 ```
@@ -126,7 +124,7 @@ python evaluate_RoBERTa.py \
 --reader {the bench mark you are evaluating}
 ```
 
-## Our data:
+### Our data:
 You can find our data [here](https://drive.google.com/drive/folders/12rPpe7vbkxfIDTSSYYJaCmO1nfD8eHF6?usp=sharing)
 
 It contains our 100% training data, you can use the "x%.py" to make it into random x% of our data.
