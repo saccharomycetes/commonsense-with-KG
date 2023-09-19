@@ -12,6 +12,8 @@ In our work, we have used the syhthetic data constructed from knowledge graph to
 
 Our models were enhanced by [CSKG](https://arxiv.org/pdf/2012.11490.pdf), so the result given by our models shows how much does knowledge graph (in our way) help the language model to better perform on the testing dataset. For example, commonsense knowledge graph may be useful for guiding language models answering Physics questions (as is shown in our paper).
 
+### Running Instructions
+
 The link to our model weights is [here](https://drive.google.com/drive/folders/1EA-3iRWePo_u9FtOt-C6D9ZtV6gCLfBT?usp=sharing).
 
 Firstly, you should clone this repository, and download the model weights to the "models" folder.
