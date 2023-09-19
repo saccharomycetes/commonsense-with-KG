@@ -1,10 +1,27 @@
 # commonsense-with-KG
-This repository contains the code for the paper "A Study of Zero-shot Adaptation with Commonsense Knowledge" 
+This repository contains the code for the paper "A Study of Zero-shot Adaptation with Commonsense Knowledge", 
+See the full paper [here](https://www.akbc.ws/2022/assets/pdfs/3_a_study_of_zero_shot_adaptatio.pdf).
+
+The models developed in the paper have shown promising results on multiple commonsense benchmarks, narrowing the gap with supervised models. Moreover, our efforts to capture key dependencies between the selected knowledge, the language model, and the properties of the task make the approach highly adaptable to new benchmarks and applications.
+
+## Gerneral Evaluation
+
+In our work, we have used the syhthetic data constructed from knowledge graph to enhance the language models. Here, we provide the best model's weights and evluation codes, please note that all the evaluation codes are in a multople-choice manner.
+
+### Intuition of the result given by our model
+
+Since our models are enhanced by [CSKG](https://arxiv.org/pdf/2012.11490.pdf), the result given by our models shows how much does knowledge graph (in our way) help the language model to better understand/ perform on the testing dataset. For example, commonsense knowledge graph may be useful for guiding language models answering Physics questions (as is shown in our paper).
+
+The link to our model weights is [here](https://drive.google.com/drive/folders/1EA-3iRWePo_u9FtOt-C6D9ZtV6gCLfBT?usp=sharing).
+
+
+
+
 
 ## `data_process` folder:
 The "make_quatiles.py" is used to generate the piqa data quartiles based on 3 terms.
 
-The "x%.py" is used to generate the random x% of a training data.(which we used for data_size analysis)
+The "x%.py" is used to generate the random x% of a training data. (which we used for data_size analysis)
 
 The "T5_eval_maker.py '' is used to transform the raw 5 benchmarks into T5 forms data.
 
@@ -87,3 +104,21 @@ It contains our 100% training data, you can use the "x%.py" to make it into rand
 It also contains data for development (evaluate during training) and 5 benchmarks' evaluate data, you can use the "T5_eval_maker.py" to transform it into a T5 evaluating format (which is not needed for training).
 
 You can use the "make_quatiles.py" to generate the piqa data quartiles based on 3 terms, it's worth noting that if you want to evaluate the terms using T5, you should replace the eval.py line 63-69 with the annotated ones.
+
+
+# Cite 
+
+If you find our dataset or code to be useful in your research, please consider citing the following paper:
+
+```
+@article{zhang2022study,
+  title={A Study of Zero-shot Adaptation with Commonsense Knowledge},
+  author={Zhang, Jiarui and Ilievski, Filip and Ma, Kaixin and Francis, Jonathan and Oltramari, Alessandro},
+  journal={Automated Knowledge Base Construction (AKBC)},
+  year={2022}
+}
+```
+
+## Contact
+
+-   `jrzhang [AT] isi.edu`
