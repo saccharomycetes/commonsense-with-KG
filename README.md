@@ -10,7 +10,7 @@ In our work, we have used the syhthetic data constructed from knowledge graph to
 
 ### Intuition of the result given by our model
 
-Since our models were enhanced by [CSKG](https://arxiv.org/pdf/2012.11490.pdf), the result given by our models shows how much does knowledge graph (in our way) help the language model to better perform on the testing dataset. For example, commonsense knowledge graph may be useful for guiding language models answering Physics questions (as is shown in our paper).
+Our models were enhanced by [CSKG](https://arxiv.org/pdf/2012.11490.pdf), so the result given by our models shows how much does knowledge graph (in our way) help the language model to better perform on the testing dataset. For example, commonsense knowledge graph may be useful for guiding language models answering Physics questions (as is shown in our paper).
 
 The link to our model weights is [here](https://drive.google.com/drive/folders/1EA-3iRWePo_u9FtOt-C6D9ZtV6gCLfBT?usp=sharing).
 
@@ -21,9 +21,11 @@ git clone https://github.com/saccharomycetes/commonsense-with-KG.git
 cd commonsense-with-KG
 ```
 
-And install the required packages by 
+And create an environment and install the required packages:
 
 ```
+conda create -n cskglm python=3.8
+conda activate cskglm
 pip install -r requirements.txt
 ```
 
