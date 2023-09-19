@@ -101,12 +101,13 @@ def main():
     model = RobertaForMaskedLM.from_pretrained(args.lm)
     tokenizer = RobertaTokenizer.from_pretrained(args.lm)
     device = torch.device(f'cuda:{args.device}') if args.device >= 0 else torch.device("cpu")
+    model.to(device)
 
     with open(args.dataset_file) as f_in:
         testing_data = json.load(f_in)
 
     predictions = []
-    for choices in tqdm(testing_data):
+    for choices in tqdm(testing_data, desc='Predicting', ncols=100):
         prediction = score_task(choices, tokenizer, device, model)
         predictions.append(prediction)
     
