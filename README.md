@@ -12,7 +12,7 @@ The models developed in the paper have shown promising **<span style="color:red"
 
 ## Code for gerneral evaluation on our model (roberta-large)
 
-In this work, we have used the syhthetic data constructed from knowledge graph to enhance the language models. Here, we provide the best roberta-large model's weights and evluation codes, please note that all the evaluation codes are in a **<span style="color:red">multople-choice</span>** manner.
+In this work, we have used the syhthetic data constructed from knowledge graph to enhance the language models. Here, we provide the best roberta-large model's weights and evluation codes, please note that all the evaluation codes are in a **<span style="color:red">multiple-choice</span>** manner.
 
 ### Intuition of the result given by our model
 
