@@ -6,13 +6,13 @@ See the full paper [here](https://www.akbc.ws/2022/assets/pdfs/3_a_study_of_zero
 
 Above is the overview of our study framework. The question generation step takes a KG(Knowledge Graph) as input, and yields a synthetic QA set. The QA set depends on the sampling size and strategy. In parallel, a LM(Language Models) is chosen out of a pool of models based on two factors: architecture and size. The selected vanilla LM is adapted based on the synthetic QA set, resulting in a commonsense LM. The accuracy score of the LM is evaluated on a task that is characterized by a degree of domain overlap, answer similarity, answer length, and vocabulary overlap.
 
-The models developed in the paper have shown promising **zero-shot** performance on multiple commonsense benchmarks, narrowing the gap with supervised models:
+The models developed in the paper have shown promising **<span style="color:red">zero-shot</span>** performance on multiple commonsense benchmarks, narrowing the gap with supervised models:
 
 ![Alt text](images/result.png)
 
-## Code for gerneral evaluation on our model
+## Code for gerneral evaluation on our model (roberta-large)
 
-In our work, we have used the syhthetic data constructed from knowledge graph to enhance the language models. Here, we provide the best model's weights and evluation codes, please note that all the evaluation codes are in a multople-choice manner.
+In this work, we have used the syhthetic data constructed from knowledge graph to enhance the language models. Here, we provide the best roberta-large model's weights and evluation codes, please note that all the evaluation codes are in a **<span style="color:red">multople-choice</span>** manner.
 
 ### Intuition of the result given by our model
 
