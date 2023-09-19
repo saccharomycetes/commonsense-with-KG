@@ -54,6 +54,8 @@ To test on your own dataset, transfer the dataset into the same format as "piqa.
 
 ## Code for paper reproduction
 
+
+
 ### `data_process` folder:
 The "make_quatiles.py" is used to generate the piqa data quartiles based on 3 terms.
 
@@ -132,14 +134,16 @@ python evaluate_RoBERTa.py \
 --reader {the bench mark you are evaluating}
 ```
 
-### Our data:
-You can find our data [here](https://drive.google.com/drive/folders/12rPpe7vbkxfIDTSSYYJaCmO1nfD8eHF6?usp=sharing)
+### Data:
+You can find our training and evaluation data [here](https://drive.google.com/drive/folders/12rPpe7vbkxfIDTSSYYJaCmO1nfD8eHF6?usp=sharing)
 
 It contains our 100% training data, you can use the "x%.py" to make it into random x% of our data.
 
 It also contains data for development (evaluate during training) and 5 benchmarks' evaluate data, you can use the "T5_eval_maker.py" to transform it into a T5 evaluating format (which is not needed for training).
 
 You can use the "make_quatiles.py" to generate the piqa data quartiles based on 3 terms, it's worth noting that if you want to evaluate the terms using T5, you should replace the eval.py line 63-69 with the annotated ones.
+
+And all regions of data [here](https://drive.google.com/drive/folders/1g5wgEaifpYdcfjyxvz70Gd0VgStTU2RW?usp=drive_link), please refer to Table 2 for the details of the data.
 
 
 # Cite 
