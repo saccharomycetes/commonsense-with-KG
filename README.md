@@ -4,19 +4,47 @@ See the full paper [here](https://www.akbc.ws/2022/assets/pdfs/3_a_study_of_zero
 
 The models developed in the paper have shown promising results on multiple commonsense benchmarks, narrowing the gap with supervised models. Moreover, our efforts to capture key dependencies between the selected knowledge, the language model, and the properties of the task make the approach highly adaptable to new benchmarks and applications.
 
-## Gerneral Evaluation
+## Code for gerneral evaluation on our model
 
 In our work, we have used the syhthetic data constructed from knowledge graph to enhance the language models. Here, we provide the best model's weights and evluation codes, please note that all the evaluation codes are in a multople-choice manner.
 
 ### Intuition of the result given by our model
 
-Since our models are enhanced by [CSKG](https://arxiv.org/pdf/2012.11490.pdf), the result given by our models shows how much does knowledge graph (in our way) help the language model to better understand/ perform on the testing dataset. For example, commonsense knowledge graph may be useful for guiding language models answering Physics questions (as is shown in our paper).
+Since our models were enhanced by [CSKG](https://arxiv.org/pdf/2012.11490.pdf), the result given by our models shows how much does knowledge graph (in our way) help the language model to better perform on the testing dataset. For example, commonsense knowledge graph may be useful for guiding language models answering Physics questions (as is shown in our paper).
 
 The link to our model weights is [here](https://drive.google.com/drive/folders/1EA-3iRWePo_u9FtOt-C6D9ZtV6gCLfBT?usp=sharing).
 
+Firstly, you should clone this repository, and download the model weights to the "models" folder.
+
+```
+git clone https://github.com/saccharomycetes/commonsense-with-KG.git
+cd commonsense-with-KG
+```
+
+And install the required packages by 
+
+```
+pip install -r requirements.txt
+```
+
+You should also download the model weights to the "models" folder.
+
+To run the general evluation code on your dataset, firstly you should organize your dataset to a json file, which is a list of list, each list contains all of the candidates, the model will pick the one that is most align with its learned commonsense knowledge.
+
+An example evluation code is shown below, where we use the [PIQA](https://arxiv.org/pdf/1906.05433.pdf) dataset as an example, the piqa dataset is ready to use in the "codes/general_eval", you can run the following code to test the result:
+
+```
+python codes/general_eval/general_eval.py \
+--lm models/roberta_large \
+--dataset_file codes/general_eval/piqa.json \
+--out_dir codes/general_eval \
+--device 0
+```
+
+To test on your own dataset, transfer the dataset into the same format as "piqa.json", and change the "dataset_file" to your dataset file path, change the "out_dir" to your desired output directory, and change the "device" to the GPU you want to use.
 
 
-
+# Code for paper reproduction
 
 ## `data_process` folder:
 The "make_quatiles.py" is used to generate the piqa data quartiles based on 3 terms.
