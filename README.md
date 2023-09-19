@@ -10,7 +10,7 @@ In our work, we have used the syhthetic data constructed from knowledge graph to
 
 ### Intuition of the result given by our model
 
-Our models were enhanced by [CSKG](https://arxiv.org/pdf/2012.11490.pdf), so the result given by our models shows how much does knowledge graph (in our way) help the language model to better perform on the testing dataset. For example, commonsense knowledge graph may be useful for guiding language models answering Physics questions (as is shown in our paper).
+Our models were enhanced by [CSKG](https://arxiv.org/pdf/2012.11490.pdf), so the result given by our models shows how much does knowledge graph (in our way) help the language model to better perform on the testing dataset. For example, commonsense knowledge graph may be useful for guiding language models answering Physics questions (as is shown in our paper by the result on PIQA).
 
 ### Running Instructions
 
