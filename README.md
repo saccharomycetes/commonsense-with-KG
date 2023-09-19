@@ -2,7 +2,13 @@
 This repository contains the code for the paper "A Study of Zero-shot Adaptation with Commonsense Knowledge", 
 See the full paper [here](https://www.akbc.ws/2022/assets/pdfs/3_a_study_of_zero_shot_adaptatio.pdf).
 
-The models developed in the paper have shown promising results on multiple commonsense benchmarks, narrowing the gap with supervised models. Moreover, our efforts to capture key dependencies between the selected knowledge, the language model, and the properties of the task make the approach highly adaptable to new benchmarks and applications.
+![Alt text](images/pipeline.png)
+
+Above is the overview of our study framework. The question generation step takes a KG(Knowledge Graph) as input, and yields a synthetic QA set. The QA set depends on the sampling size and strategy. In parallel, a LM(Language Models) is chosen out of a pool of models based on two factors: architecture and size. The selected vanilla LM is adapted based on the synthetic QA set, resulting in a commonsense LM. The accuracy score of the LM is evaluated on a task that is characterized by a degree of domain overlap, answer similarity, answer length, and vocabulary overlap.
+
+The models developed in the paper have shown promising **zero-shot** performance on multiple commonsense benchmarks, narrowing the gap with supervised models:
+
+![Alt text](images/result.png)
 
 ## Code for gerneral evaluation on our model
 
