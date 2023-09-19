@@ -31,7 +31,7 @@ conda activate cskglm
 pip install -r requirements.txt
 ```
 
-To run the general evluation code on your dataset, firstly you should organize your dataset to a json file, which is a list of list, each list contains all of the candidates, the model will pick the one that is most align with its learned commonsense knowledge.
+To run the general evluation code on your dataset, you should organize your dataset to a json file, which is a list of list, each list contains all of the candidates, the model will pick the one that aligns most with its learned commonsense knowledge.
 
 An example evluation code is shown below, where we use the [PIQA](https://arxiv.org/pdf/1906.05433.pdf) dataset as an example, the piqa dataset is ready to use in the "codes/general_eval/piqa.json", you can run the following code to test the result:
 
